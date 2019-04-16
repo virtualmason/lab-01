@@ -1,10 +1,7 @@
 .four-floats article {
   height: 250px;
   line-height: 250px;
-}
-
-.half {
-  min-width: 50%;
+  width: 50%;
 }
 
 .float {
@@ -14,4 +11,10 @@
 .clearfix {
   clear: both;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .four-floats article {
+    width: 25%;
+  }
 }
