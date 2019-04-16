@@ -15,4 +15,8 @@ header, aside, section, article {
   body {
     max-width: 960px;
   }
+
+  header, aside, section, article {
+    background-color: red;
+  }
 }

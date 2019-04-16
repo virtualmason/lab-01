@@ -25,12 +25,12 @@ section:last-of-type {
 @media (min-width: 768px) {
   aside {
     height: 600px;
-    width: 200px;
+    width: 20.833333333%;
     line-height: 600px;
   }
 
   section {
-    width: 380px;
+    width: 39.583333333%;
     height: 200px;
     line-height: 200px;
   }
@@ -51,6 +51,6 @@ section:last-of-type {
 
   .four-floats,
   section:last-of-type {
-    width: 760px;
+    width: 79.166666666%;
   }
 }
