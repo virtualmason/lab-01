@@ -8,15 +8,40 @@ $(document).ready(() => {
 
   const colorChange = () => {
 
-    const randColor = () => `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 1)`
-    const updateElement = element => $(element).css('background-color', randColor());
+    const colors = [
+      'red',
+      'blue',
+      'green',
+      'cyan',
+      'aliceblue',
+      'forestgreen',
+      'slate',
+      'maroon',
+      'orange'
+    ]
+
+    const updateElement = (element, color) => $(element).css('background-color', color);
     
-    updateElement(header);
-    updateElement(aside);
-    sections.forEach(section => updateElement(section));
-    articles.forEach(article => updateElement(article));
+    if ($(window).width() < 768) {
+      updateElement(header, colors[0]);
+      updateElement(aside, colors[1]);
+      for (let i = 0; i < sections.length; i++) {
+        updateElement(sections[i], colors[i + 2]);
+      }
+      for (let i = 0; i < articles.length; i++) {
+        updateElement(articles[i], colors[i + 5]);
+      }
+    } else {
+      updateElement(header, colors[8]);
+      updateElement(aside, colors[7]);
+      for (let i = 0; i < sections.length; i++) {
+        updateElement(sections[i], colors[colors.length - (i + 3)]);
+      }
+      for (let i = 0; i < articles.length; i++) {
+        updateElement(articles[i], colors[colors.length - (i + 6)]);
+      }
+    }
   }
 
-  $(window).resize(colorChange);
   colorChange();
 })
