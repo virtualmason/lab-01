@@ -10,7 +10,7 @@ header, aside, section, article {
   border: 1px solid black;
 }
 
-header {
+/* header {
   background-color: red;
 }
 
@@ -48,14 +48,14 @@ article:nth-child(4) {
 
 section:last-of-type {
   background-color: aqua;
-}
+} */
 
 @media (min-width: 768px) {
   body {
     max-width: 960px;
   }
 
-  header {
+  /* header {
     background-color: aquamarine;
   }
   
@@ -93,5 +93,5 @@ section:last-of-type {
   
   section:last-of-type {
     background-color: darkorchid;
-  }
+  } */
 }
