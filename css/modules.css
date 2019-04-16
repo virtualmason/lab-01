@@ -1,10 +1,17 @@
-img {
-  float: left;
-  box-sizing: border-box;
-  border: solid 1px black;
-  width: 100%;
+.four-floats article {
+  height: 250px;
+  line-height: 250px;
 }
 
 .half {
-  width: 50%;
+  min-width: 50%;
+}
+
+.float {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
 }

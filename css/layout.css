@@ -1,0 +1,31 @@
+header {
+  height: 75px;
+  line-height: 75px;
+}
+
+aside {
+  height: 150px;
+  line-height: 150px;
+}
+
+section {
+  height: 125px;
+  line-height: 125px;
+}
+
+.four-floats {
+  height: 500px;
+}
+
+footer {
+  height: 80px;
+  line-height: 80px;
+}
+
+@media (min-width: 768px) {
+  aside {
+    float: left;
+    min-height: 600px;
+    min-width: 200px;
+  }
+}
