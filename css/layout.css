@@ -1,0 +1,56 @@
+header {
+  height: 75px;
+  line-height: 75px;
+}
+
+aside {
+  height: 150px;
+  line-height: 150px;
+}
+
+section {
+  height: 125px;
+  line-height: 125px;
+}
+
+.four-floats {
+  height: 500px;
+}
+
+section:last-of-type {
+  height: 80px;
+  line-height: 80px;
+}
+
+@media (min-width: 768px) {
+  aside {
+    height: 600px;
+    width: 20.833333333%;
+    line-height: 600px;
+  }
+
+  section {
+    width: 39.583333333%;
+    height: 200px;
+    line-height: 200px;
+  }
+
+  .four-floats {
+    height: 250px;
+  }
+
+  section:last-of-type {
+    height: 150px;
+    line-height: 150px;
+  }
+
+  aside,
+  section {
+    float: left;
+  }
+
+  .four-floats,
+  section:last-of-type {
+    width: 79.166666666%;
+  }
+}
