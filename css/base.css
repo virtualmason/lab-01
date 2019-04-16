@@ -10,88 +10,8 @@ header, aside, section, article {
   border: 1px solid black;
 }
 
-/* header {
-  background-color: red;
-}
-
-aside {
-  background-color: blue;
-}
-
-section:first-of-type {
-  background-color: green;
-}
-
-section:nth-child(2) {
-  background-color: aliceblue;
-}
-
-section:nth-child(3) {
-  background-color: salmon;
-}
-
-article:first-of-type {
-  background-color: forestgreen;
-}
-
-article:nth-child(2) {
-  background-color: pink;
-}
-
-article:nth-child(3) {
-  background-color: fuchsia;
-}
-
-article:nth-child(4) {
-  background-color: gold;
-}
-
-section:last-of-type {
-  background-color: aqua;
-} */
-
 @media (min-width: 768px) {
   body {
     max-width: 960px;
   }
-
-  /* header {
-    background-color: aquamarine;
-  }
-  
-  aside {
-    background-color: azure;
-  }
-  
-  section:first-of-type {
-    background-color: beige;
-  }
-  
-  section:nth-child(2) {
-    background-color: blueviolet;
-  }
-  
-  section:nth-child(3) {
-    background-color: chartreuse;
-  }
-  
-  article:first-of-type {
-    background-color: cornflowerblue;
-  }
-  
-  article:nth-child(2) {
-    background-color: coral;
-  }
-  
-  article:nth-child(3) {
-    background-color: crimson;
-  }
-  
-  article:nth-child(4) {
-    background-color: darkcyan;
-  }
-  
-  section:last-of-type {
-    background-color: darkorchid;
-  } */
 }
