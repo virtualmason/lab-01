@@ -1,4 +1,4 @@
-header {
+/* header {
   height: 75px;
   line-height: 75px;
 }
@@ -20,37 +20,41 @@ section {
 section:last-of-type {
   height: 80px;
   line-height: 80px;
-}
+} */
 
 @media (min-width: 768px) {
+  header, aside, section, article {
+    display: grid;
+    align-content: center;
+  }
+
   aside {
-    height: 600px;
-    width: 20.833333333%;
-    line-height: 600px;
+    grid-row: s/e;
+    grid-column: aside-s/aside-e;
   }
 
   section {
-    width: 39.583333333%;
-    height: 200px;
-    line-height: 200px;
+    grid-row: sections-s/sections-e;
+  }
+
+  section:nth-child(1) {
+    grid-column: section2-s/section2-e;
+  }
+
+  section:nth-child(2) {
+    grid-column: section1-s/section1-e;
   }
 
   .four-floats {
-    height: 250px;
+    grid-row: articles-s/articles-e;
+    grid-column: section1-s/section2-e;
+
+    grid-template-columns: repeat(4, 1fr);
+    align-content: unset;
   }
 
   section:last-of-type {
-    height: 150px;
-    line-height: 150px;
-  }
-
-  aside,
-  section {
-    float: left;
-  }
-
-  .four-floats,
-  section:last-of-type {
-    width: 79.166666666%;
+    grid-row: footer-s/footer-e;
+    grid-column: section1-s/section2-e;
   }
 }

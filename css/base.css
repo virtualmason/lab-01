@@ -13,5 +13,14 @@ header, aside, section, article {
 @media (min-width: 768px) {
   body {
     max-width: 960px;
+
+    display: grid;
+    grid-template-rows: [header-s] 75px [header-e main-s] 600px [main-e];
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: [s sections-s] 200px [sections-e articles-s] 250px [articles-e footer-s] 150px [footer-e e];
+    grid-template-columns: [aside-s] 20.833333333% [aside-e section1-s] 39.583333333% [section1-e section2-s] 39.583333333% [section2-e];
   }
 }

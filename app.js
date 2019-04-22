@@ -22,7 +22,7 @@ $(document).ready(() => {
 
     const updateElement = (element, color) => $(element).css('background-color', color);
     
-    if ($(window).width() > 992) {
+    if ($(window).width() > 991) {
       updateElement(header, colors[0]);
       updateElement(aside, colors[1]);
       for (let i = 0; i < sections.length; i++) {
