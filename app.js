@@ -22,11 +22,20 @@ $(document).ready(() => {
 
     const updateElement = (element, color) => $(element).css('background-color', color);
     
-    if ($(window).width() < 768) {
+    if ($(window).width() > 991) {
       updateElement(header, colors[0]);
       updateElement(aside, colors[1]);
       for (let i = 0; i < sections.length; i++) {
         updateElement(sections[i], colors[i + 2]);
+      }
+      for (let i = 0; i < articles.length; i++) {
+        updateElement(articles[i], colors[i + 5]);
+      }
+    } else if ($(window).width() > 767) {
+      updateElement(header, colors[2]);
+      updateElement(aside, colors[3]);
+      for (let i = 0; i < sections.length; i++) {
+        updateElement(sections[i], colors[i]);
       }
       for (let i = 0; i < articles.length; i++) {
         updateElement(articles[i], colors[i + 5]);
@@ -44,4 +53,5 @@ $(document).ready(() => {
   }
 
   colorChange();
+  $(window).resize(colorChange);
 })
