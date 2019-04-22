@@ -1,56 +1,61 @@
-/* header {
-  height: 75px;
-  line-height: 75px;
+header, aside, section, article {
+  display: grid;
+  align-content: center;
+  height: 100%;
+}
+
+header {
+  grid-row: header-s/header-e;
 }
 
 aside {
-  height: 150px;
-  line-height: 150px;
+  grid-row: aside-s/aside-e;
 }
 
-section {
-  height: 125px;
-  line-height: 125px;
+section:first-of-type {
+  grid-row: section1-s/section1-e;
+}
+
+section:nth-of-type(2) {
+  grid-row: section2-s/section2-e;
 }
 
 .four-floats {
+  grid-row: section3-s/section3-e;
   height: 500px;
+
+  align-content: unset;
+  grid-template-rows: 250px 250px;
+  grid-template-columns: 1fr 1fr;
 }
 
 section:last-of-type {
-  height: 80px;
-  line-height: 80px;
-} */
+  grid-row: footer-s/footer-e;
+}
 
 @media (min-width: 768px) {
-  header, aside, section, article {
-    display: grid;
-    align-content: center;
-  }
 
   aside {
     grid-row: s/e;
     grid-column: aside-s/aside-e;
   }
 
-  section {
+  section:first-of-type {
+    grid-column: section1-s/section1-e;
     grid-row: sections-s/sections-e;
   }
 
-  section:nth-child(1) {
+  section:nth-of-type(2) {
     grid-column: section2-s/section2-e;
-  }
-
-  section:nth-child(2) {
-    grid-column: section1-s/section1-e;
+    grid-row: sections-s/sections-e;
   }
 
   .four-floats {
     grid-row: articles-s/articles-e;
     grid-column: section1-s/section2-e;
+    height: 250px;
 
     grid-template-columns: repeat(4, 1fr);
-    align-content: unset;
   }
 
   section:last-of-type {
